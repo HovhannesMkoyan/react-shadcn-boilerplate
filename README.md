@@ -1,50 +1,53 @@
-# React + TypeScript + Vite
+# React + Vite + shadcn/ui Boilerplate
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This repository provides a boilerplate for quickly setting up a React project using Vite as the build tool and integrating shadcn/ui components.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- ⚡️ Vite for fast development and building
+- ⚛️ React (v18) for building user interfaces
+- 🎨 shadcn/ui for beautiful, accessible components
+- 🔧 TypeScript support
+- 📦 Pre-configured with essential tools and settings
 
-## Expanding the ESLint configuration
+## Getting Started
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+1. Clone the repository:
+   ```
+   git clone https://github.com/HovhannesMkoyan/react-shadcn-boilerplate.git
+   ```
 
-- Configure the top-level `parserOptions` property like this:
+2. Install dependencies:
+   ```
+   cd react-vite-shadcn-boilerplate
+   pnpm install
+   ```
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+3. Start the development server:
+   ```
+   pnpm run dev
+   ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+4. Open your browser and visit `http://localhost:5173`
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+## shadcn/ui Components
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+This boilerplate comes with the Button component from shadcn/ui pre-installed. To add more components:
+
+1. Run the shadcn/ui CLI command for the specific component you want to add. For example, to add the Card component:
+   ```
+   npx shadcn-ui@latest add card
+   ```
+
+2. Follow the prompts to add the desired component
+
+3. Import and use the component in your React files
+
+
+## Learn More
+
+To learn more about the tools and libraries used in this boilerplate:
+
+- [Vite Documentation](https://vitejs.dev/)
+- [React Documentation](https://reactjs.org/)
+- [shadcn/ui Documentation](https://ui.shadcn.com/)
